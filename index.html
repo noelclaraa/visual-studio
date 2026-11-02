@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excusator – Le générateur d'excuses</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="fond"></div>
+
+  <header>
+    <p class="surtitre">Le site qui vous sauve la mise</p>
+    <h1>Excusator</h1>
+    <p class="intro">Une situation embarrassante ? Choisis ta catégorie et génère une excuse en un clic.</p>
+  </header>
+
+  <main>
+    <section class="bloc">
+      <h2>1. Choisis ta situation</h2>
+      <div id="grille"></div>
+    </section>
+
+    <section class="bloc" id="generateur">
+      <h2>2. Génère ton excuse</h2>
+      <p class="categorie-active">Catégorie : <strong id="nom-categorie"></strong></p>
+
+      <div class="champs">
+        <input type="text" id="destinataire" placeholder="À qui écris-tu ? (ex : Marc)">
+        <input type="text" id="auteur" placeholder="Ton prénom">
+      </div>
+      <label class="complet">
+        <input type="checkbox" id="complet">
+        Écrire un message complet (Salut… / signature)
+      </label>
+
+      <div class="modes">
+        <button type="button" class="mode actif" id="btn-serieuse">😇 Crédible</button>
+        <button type="button" class="mode" id="btn-delirante">🤪 Délirante</button>
+      </div>
+
+      <div class="bulle" id="bulle">Clique sur « Générer »</div>
+
+      <div class="jauge-zone">
+        <span>Indice de crédibilité : <strong id="pourcentage">--</strong>%</span>
+        <div class="jauge"><div class="jauge-remplissage" id="jauge"></div></div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="principal" id="btn-generer">✨ Générer une excuse</button>
+        <button type="button" class="secondaire" id="btn-liste">📚 Excuse de la liste</button>
+        <button type="button" class="secondaire" id="btn-copier">📋 Copier</button>
+      </div>
+
+      <p class="note" id="note"></p>
+    </section>
+
+    <section class="bloc" id="conseils">
+      <h2>3. Les 6 règles d'or de l'excuse professionnelle</h2>
+      <p class="chapeau">Selon une étude très sérieuse menée auprès de mon canapé, voici les principes fondamentaux à respecter.</p>
+
+      <div class="conseils">
+        <article class="conseil">
+          <span class="numero">1</span>
+          <h3>Anticipe, comme un grand stratège</h3>
+          <p>Les spécialistes recommandent de préparer son excuse au minimum 48 heures à l'avance. Une excuse improvisée est comme un soufflé : elle retombe au moindre regard suspicieux.</p>
+        </article>
+
+        <article class="conseil">
+          <span class="numero">2</span>
+          <h3>Parle d'une voix posée et solennelle</h3>
+          <p>Des recherches confirment que le ton d'un présentateur météo rassure les foules. Annonce ton absence comme on annonce un anticyclone : calmement, avec une légère touche de fatalité.</p>
+        </article>
+
+        <article class="conseil">
+          <span class="numero">3</span>
+          <h3>Ne cligne jamais des yeux (ou presque)</h3>
+          <p>Un regard fixe inspire la confiance. Attention toutefois : après 4 minutes sans cligner, l'effet inverse se produit et ton interlocuteur appellera quelqu'un.</p>
+        </article>
+
+        <article class="conseil">
+          <span class="numero">4</span>
+          <h3>Hydrate-toi avant de t'excuser</h3>
+          <p>Un verre d'eau avant l'annonce est indispensable. Aucune étude ne le prouve, mais cela donne au moins l'air d'une personne organisée, ce qui est déjà un excellent début.</p>
+        </article>
+
+        <article class="conseil">
+          <span class="numero">5</span>
+          <h3>Garde un dossier de preuves (imaginaire)</h3>
+          <p>Prévois toujours une pile de documents « très importants » à brandir en cas de doute. Un dossier cartonné vide suffit : personne n'a jamais osé demander à voir l'intérieur d'une chemise à élastiques.</p>
+        </article>
+
+        <article class="conseil">
+          <span class="numero">6</span>
+          <h3>Termine par une petite phrase mystérieuse</h3>
+          <p>Conclure par « et c'est tout ce que je peux dire » ajoute immédiatement 40 % de crédibilité, et 100 % de mystère. À utiliser avec modération, comme le piment d'Espelette.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bloc" id="temoignages">
+      <h2>🌟 Ils ont testé et approuvé</h2>
+      <p class="chapeau">Des figures historiques et des personnalités partagent leur secret pour esquiver les galères.</p>
+
+      <div class="grille-temoignages">
+        <article class="temoignage">
+          <div class="avatar">🇫🇷</div>
+          <h3>Emmanuel Macron</h3>
+          <p class="contexte"><strong>Situation :</strong> Annoncer un confinement</p>
+          <p class="citation">« Je suis vraiment désolé, j'ai un empêchement national que je ne peux pas déplacer. On se reconfine très vite, promis ! »</p>
+        </article>
+
+        <article class="temoignage">
+          <div class="avatar">📜</div>
+          <h3>Jules César</h3>
+          <p class="contexte"><strong>Situation :</strong> Annuler les Ides de Mars</p>
+          <p class="citation">« Alerte rouge : mon horoscope m'a mis en quarantaine et ma toge fait une crise existentielle. Ne cherchez pas à comprendre. »</p>
+        </article>
+
+        <article class="temoignage">
+          <div class="avatar">☀️</div>
+          <h3>Louis XIV</h3>
+          <p class="contexte"><strong>Situation :</strong> Refuser d'aller à une réunion à Versailles</p>
+          <p class="citation">« L'État c'est moi, mais mon lit c'est ma priorité. Ma batterie sociale est à 1 % aujourd'hui. »</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Site humoristique fait pour apprendre le HTML, le CSS et le JavaScript.</p>
+    <p>Petit conseil : une excuse sincère marche presque toujours mieux qu'une excuse inventée. 😉</p>
+  </footer>
+
+  <script>
+    // ============ LES DONNÉES ============
+    var categories = [
+      {
+        id: "universite", nom: "Université", emoji: "🎓", note: "",
+        serieuses: [
+          "Mon réveil n'a pas sonné, je vais rattraper le cours avec les notes d'un camarade.",
+          "J'ai un rendez-vous administratif que je n'ai pas pu déplacer.",
+          "Mon train est annulé, je ne pourrai pas arriver à temps. Pourriez-vous m'envoyer le support de cours ?",
+          "J'ai un gros mal de tête, je préfère me reposer pour être efficace demain.",
+          "Un problème de transport m'empêche d'être présent(e) aujourd'hui.",
+          "Je dois finir un rendu urgent pour un autre cours et je manque de temps."
+        ],
+        delirantes: [
+          "Mon chat a pris mon sac en otage et refuse de négocier.",
+          "J'ai été élu(e) président(e) de mon immeuble ce matin, séance de crise.",
+          "Mon cerveau est en mise à jour : 3 % chargés, ne pas éteindre.",
+          "J'ai découvert que le lundi est un complot, je mène l'enquête.",
+          "Mon pantalon a disparu et le plan B n'existe pas.",
+          "Ma plante verte a besoin de moi pour un entretien d'embauche."
+        ]
+      },
+      {
+        id: "enterrement", nom: "Enterrement", emoji: "🕊️",
+        note: "Pour un enterrement, un message sincère et un petit mot touchent toujours plus qu'une excuse inventée. Les excuses délirantes sont à lire pour rire seulement.",
+        serieuses: [
+          "Je suis vraiment désolé(e) de ne pas pouvoir venir. Je pense très fort à vous et je vous appellerai bientôt.",
+          "Je ne peux pas me déplacer jusque-là, mais je vous envoie mes plus sincères condoléances par courrier.",
+          "Mon état de santé ne me permet pas de voyager, je serai avec vous par la pensée toute la journée.",
+          "Je ne pourrai pas être là physiquement, mais je ferai envoyer des fleurs en son souvenir.",
+          "Une obligation que je n'ai pas pu déplacer m'en empêche, j'en suis profondément navré(e).",
+          "Les cérémonies sont difficiles pour moi, mais
