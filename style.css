@@ -443,3 +443,58 @@ footer {
 footer p + p {
   margin-top: 0.3rem;
 }
+/* ---------- Témoignages ---------- */
+.grille-temoignages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.temoignage {
+  padding: 1.4rem 1.2rem;
+  text-align: center;
+  background: #fffbeb;
+  border: 2px solid #fde68a;
+  border-radius: 16px;
+  transition: transform 0.2s;
+}
+
+.temoignage:hover {
+  transform: translateY(-4px) rotate(-1deg);
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #fff;
+  border: 3px solid #fbbf24;
+  border-radius: 50%;
+}
+
+.temoignage h3 {
+  color: #92400e;
+}
+
+.contexte {
+  margin: 0.3rem 0 0.8rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+.citation {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.mention {
+  margin-top: 1.4rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}

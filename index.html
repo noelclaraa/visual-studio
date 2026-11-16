@@ -165,7 +165,7 @@
           "Je dois finir un rendu urgent pour un autre cours et je manque de temps."
         ],
         delirantes: [
-          "Mon chat a pris mon sac en otage et refuse catégoriquement de négocier.",
+          "Mon chat a pris mon sac en otage et refuse de négocier.",
           "J'ai été élu(e) président(e) de mon immeuble ce matin, séance de crise.",
           "Mon cerveau est en mise à jour : 3 % chargés, ne pas éteindre.",
           "J'ai découvert que le lundi est un complot, je mène l'enquête.",
@@ -473,4 +473,31 @@
     });
 
     // ============ LES CLICS ============
-    document.getElementById("btn-generer").addEventListener("click",
+    document.getElementById("btn-generer").addEventListener("click", genererExcuse);
+    document.getElementById("btn-liste").addEventListener("click", excuseDeLaListe);
+    document.getElementById("btn-copier").addEventListener("click", copier);
+    btnSerieuse.addEventListener("click", function () { changerTon("serieuses"); });
+    btnDelirante.addEventListener("click", function () { changerTon("delirantes"); });
+    champDest.addEventListener("input", mettreAJourTexte);
+    champAuteur.addEventListener("input", mettreAJourTexte);
+    caseComplet.addEventListener("change", mettreAJourTexte);
+
+    // ============ AU CHARGEMENT ============
+    choisirCategorie(categories[0]);
+
+    // ============ FOND ANIMÉ ============
+    var fond = document.getElementById("fond");
+    var decos = ["🙈", "🛋️", "⏰", "💤", "🤥", "🎭", "📞", "🧦", "🐈", "🪴", "🍞", "🙊", "✉️", "🛌"];
+    for (var d = 0; d < 26; d++) {
+      var deco = document.createElement("span");
+      deco.className = "deco";
+      deco.textContent = decos[Math.floor(Math.random() * decos.length)];
+      deco.style.left = Math.random() * 100 + "%";
+      deco.style.fontSize = 22 + Math.random() * 36 + "px";
+      deco.style.animationDuration = 16 + Math.random() * 18 + "s";
+      deco.style.animationDelay = "-" + Math.random() * 30 + "s";
+      fond.appendChild(deco);
+    }
+  </script>
+</body>
+</html>
