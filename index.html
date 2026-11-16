@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
+  <!-- liens pour la typographie, titre du site -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Excusator – Le générateur d'excuses</title>
@@ -12,21 +14,27 @@
 <body>
   <div id="fond"></div>
 
+<!-- l'entête du site avec le texte qu'il y a écrit dedans, le titre du site, intro, surtitre, paragraphe -->
   <header>
     <p class="surtitre">Le site qui vous sauve la mise</p>
+
+    <!-- ce qu'il y a écrit dans la première section -->
     <h1>Excusator</h1>
     <p class="intro">Une situation embarrassante ? Choisis ta catégorie et génère une excuse en un clic.</p>
   </header>
 
+  <!-- "bloc" principal, ce qu'il y a écrit dedans -->
   <main>
     <section class="bloc">
       <h2>1. Choisis ta situation</h2>
       <div id="grille"></div>
     </section>
 
+    <!-- p c'est ce qu'il y a écrit dans un paragraphe, strong c'est mettre en avant un texte acr il est important -->
     <section class="bloc" id="generateur">
       <h2>2. Génère ton excuse</h2>
       <p class="categorie-active">Catégorie : <strong id="nom-categorie"></strong></p>
+
 
       <div class="champs">
         <input type="text" id="destinataire" placeholder="À qui écris-tu ? (ex : Marc)">
@@ -37,6 +45,7 @@
         Écrire un message complet (Salut… / signature)
       </label>
 
+      <!-- ce qu'il y a écrit dans les endroits sur lesquels on peut cliquer dessus, ajout d'émojis -->
       <div class="modes">
         <button type="button" class="mode actif" id="btn-serieuse">😇 Crédible</button>
         <button type="button" class="mode" id="btn-delirante">🤪 Délirante</button>
@@ -58,6 +67,7 @@
       <p class="note" id="note"></p>
     </section>
 
+    <!-- ce qu'il y a écrit dans le bloc conseils avec paragraphes et blocs de textes -->
     <section class="bloc" id="conseils">
       <h2>3. Les 6 règles d'or de l'excuse professionnelle</h2>
       <p class="chapeau">Selon une étude très sérieuse menée auprès de mon canapé, voici les principes fondamentaux à respecter.</p>
@@ -100,7 +110,9 @@
         </article>
       </div>
     </section>
-
+    
+<!-- bloc avec dedans les témoignaes "ils ont testé et approuvé" avec émoji. Chaque bloc est un témoignage avec dans le p l'excuse 
+ qui a été utilisée par la personne qui témoigne -->
     <section class="bloc" id="temoignages">
       <h2>🌟 Ils ont testé et approuvé</h2>
       <p class="chapeau">Des figures historiques et des personnalités partagent leur secret pour esquiver les galères.</p>
@@ -130,12 +142,16 @@
     </section>
   </main>
 
+  <!-- ce qu'il y a écrit au pied de la page du site internet, paragraphe, texte, émoji -->
   <footer>
     <p>Site humoristique fait pour apprendre le HTML, le CSS et le JavaScript.</p>
     <p>Petit conseil : une excuse sincère marche presque toujours mieux qu'une excuse inventée. 😉</p>
   </footer>
 
+  <!-- toutes les excuses dispos dans le générateur d'excuses avec toutes les catégories d'excuses (enterrement, université, sérieuses,
+   délirantes, émojis) -->
   <script>
+    
     // ============ LES DONNÉES ============
     var categories = [
       {
